@@ -3,9 +3,10 @@ package exercicio01;
 import java.util.Scanner;
 
 public class App {
+    
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
         int num1;
         int num2;
         int soma;
