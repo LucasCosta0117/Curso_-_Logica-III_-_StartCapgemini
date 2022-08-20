@@ -7,36 +7,30 @@ public class App {
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
-        ArrayList<String> nome = new ArrayList<String>();
-        ArrayList<String> sexo = new ArrayList<String>();
+        ArrayList<String> nome = new ArrayList<>();
+        ArrayList<String> sexo = new ArrayList<>();
         int contMasc=0, contFem=0;
 
-        int i=0;
-        while (i < 3) {
+        for (int i=0; i < 3; i++) {
             System.out.print("Informe o nome: ");
             nome.add(i, input.nextLine());
             System.out.print("Informe o sexo da pessoa ( M = Masculino / F = Feminino): ");
             sexo.add(i, input.nextLine());
-            
-            if (sexo.get(i) == "m" || sexo.get(i) == "M") {
+
+            if (sexo.get(i).equals("m") || sexo.get(i).equals("M")) {
                 contMasc ++;
+                sexo.set(i, "Masculino");
             } else {
                 contFem ++;
+                sexo.set(i, "Feminino");
             }
-            
-            i++;
         }
 
-        i=0;
-        while (i < 3) {
+        for (int i=0; i < 3; i++) {
             System.out.println("Nome: "+ nome.get(i) +" | Sexo: "+ sexo.get(i));
-            
-            i++;
         }
-        
-        System.out.print("Foram informados "+ contFem +" pessoas do sexo Feminino, e, "+
-        contMasc +" do sexo Masculino.");
-        
-        input.close();
+
+        System.out.print("Foram informados "+ contMasc +" pessoas do sexo Masculino, e, "+
+                contFem +" do sexo Feminino.");
     }
 }
