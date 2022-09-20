@@ -25,14 +25,14 @@ public class Main {
 
         qtdFuncionarios = 3; //Proposto 584
 
-        System.out.print("Informe o valor do SALáRIO MíNIMO atual: ");
+        System.out.println("Informe o valor do SALáRIO MíNIMO atual: ");
         salarioMin = input.nextFloat();
         input.nextLine();
 
         for (int i=0; i<qtdFuncionarios; i++) {
-            System.out.print("NOME do funcionário: ");
+            System.out.println("NOME do funcionário: ");
             nome = input.nextLine();
-            System.out.print("SALáRIO ATUAL do funcionário: ");
+            System.out.println("SALáRIO ATUAL do funcionário: ");
             salario = input.nextFloat();
             input.nextLine();
 
